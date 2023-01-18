@@ -1,0 +1,18 @@
+{% from "../icon/icon.nunj" import icon %}
+
+{% macro popups(names) %}
+	<div class="popups" data-popups>
+			{% for i in names %}
+				<div class="popups__popup" data-popup="{{ i.name }}">
+					{% include './popups-' + i.name + '.nunj' %}
+					<button class="popups__close-button close-button" type="button" data-popup-closer>
+						{{ icon({
+							iconName: 'close',
+							className: 'popups__close-icon',
+							attr: 'width="24" height="24"'
+						}) }}
+					</button>
+				</div>
+			{% endfor %}
+	</div>
+{% endmacro %}

@@ -1,0 +1,30 @@
+.pay-now {
+	max-width: rem(640);
+	max-height: 340px;
+	padding: rem(16);
+	overflow: auto;
+	&__title {
+		margin-bottom: rem(39);
+		text-align: center;
+	}
+	&__text {
+		max-width: rem(300);
+		margin: 0 auto;
+		margin-bottom: rem(39);
+		text-align: center;
+		color: $c-grey-1;
+	}
+	&__button {
+		width: rem(160);
+	}
+	&__buttons {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: rem(16);
+		row-gap: rem(16);
+		justify-content: center;
+	}
+	&__info {
+		margin-top: 39px;
+	}
+}

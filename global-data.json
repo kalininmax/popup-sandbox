@@ -22,5 +22,10 @@
 			"title": "Item 2",
 			"text": "Desc 2"
 		}
+	],
+	"popupsList": [
+		{
+			"name": "pay-now"
+		}
 	]
 }

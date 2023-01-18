@@ -5,5 +5,9 @@
 .container {
 	max-width: 980px;
 	margin: auto;
+	padding-inline: 24px;
 	box-sizing: content-box;
+	&._pt {
+		padding-top: 24px;
+	}
 }

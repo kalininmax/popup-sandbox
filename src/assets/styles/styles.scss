@@ -5,13 +5,14 @@
 @import 'reset';
 @import 'global';
 @import 'layout';
-// @import 'controls';
 
 // ======= COMPONENTS =======
 @import '../../components/button/button';
+@import '../../components/popups/popups';
 
 // ======= INCLUDES =======
 @import '../../includes/header/header';
+@import '../../includes/pay-now/pay-now';
 
 // ======= PAGES =======
 @import 'pages/main';

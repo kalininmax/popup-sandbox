@@ -9,6 +9,8 @@
 // 	overwrite: 'auto',
 // });
 
+import Popups from 'sp.popups';
+
 class ProjectApp {
 	constructor() {
 		this.env = require('./utils/env').default;
@@ -21,6 +23,8 @@ class ProjectApp {
 		this.modules = {};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
+
+			new Popups();
 		});
 	}
 }

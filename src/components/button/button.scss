@@ -1,35 +1,41 @@
 .button {
-	@extend .transition-active;
+	@extend .animated;
+	@include reset-btn;
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	border: 2px solid rgba(#000, 0.3);
-	height: 54px;
-	font-weight: 700;
-	cursor: pointer;
-	font-size: 16px;
-	letter-spacing: -0.5px;
-	padding: 1px 20px 0;
-
-	&:hover {
-		background-color: rgba(#000, 0.3);
-		color: rgba(#000, 0.8);
-		transition: none;
-	}
-
-	&:active {
-		background-color: rgba(#000, 0.25);
-		border-color: rgba(#000, 0.25);
-
-		.button__chevron-right {
-			transform: translateX(1px);
-			transition: none;
-		}
-	}
-
+	align-items: center;
+	min-height: rem(56);
+	padding: 0 rem(25);
+	border-radius: rem(16);
+	color: $c-white;
+	background-color: $c-blue-2;
+	font-size: rem(18);
+	font-weight: 500;
+	line-height: 1.1;
+	text-decoration: none;
+	box-sizing: border-box;
 	&__chevron-right {
 		margin-left: 5px;
 		transition: transform 0.1s ease-out,
 			fill $default-transition-duration $default-transition-function;
+	}
+	&:hover {
+		color: $c-white;
+		background-color: $c-blue-1;
+	}
+	&:active {
+		background-color: $c-blue-2;
+	}
+	&._additional {
+		color: $c-blue-2;
+		background-color: $c-purple-1;
+		&:hover {
+			color: $c-white;
+			background-color: $c-blue-3;
+		}
+		&:active {
+			color: $c-white;
+			background-color: $c-blue-2;
+		}
 	}
 }

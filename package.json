@@ -78,13 +78,13 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.7",
+    "body-scroll-lock": "^4.0.0-beta.0",
     "core-js": "^3.15.2",
     "global": "^4.4.0",
     "gsap": "^3.7.0",
     "gulp-dart-sass": "^1.0.2",
     "regenerator-runtime": "^0.13.5",
-    "sass": "^1.35.1",
-    "sp.popups": "github:kalininmax/sp.popups"
+    "sass": "^1.35.1"
   },
   "lint-staged": {
     "src/assets/js/**/*.js": [

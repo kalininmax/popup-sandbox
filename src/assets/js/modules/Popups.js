@@ -1,5 +1,6 @@
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import Signal from '../classes/Signal';
+import Env from '../utils/env';
 
 const HTML_CLASSLIST = document.documentElement.classList;
 
@@ -107,7 +108,8 @@ class Popups {
 		this.openedClass = '_popup-opened-' + name;
 		HTML_CLASSLIST.add(this.openedClass);
 
-		disableBodyScroll(this.activePopup);
+		!Env.isIOS && disableBodyScroll(this.activePopup);
+		Env.isIOS && (document.body.style.overflow = 'hidden');
 
 		this.onOpen.call();
 	}
@@ -129,7 +131,8 @@ class Popups {
 				scale: 0.98,
 				display: 'none',
 				onComplete: () => {
-					enableBodyScroll(this.activePopup);
+					!Env.isIOS && enableBodyScroll(this.activePopup);
+					Env.isIOS && (document.body.style.overflow = '');
 					this.onClose.call();
 				},
 			});

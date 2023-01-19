@@ -24,7 +24,7 @@ class ProjectApp {
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
 
-			this.modules.Popups.animations.fadeUp = (popup, immediate) => {
+			this.modules.Popups.animations.fadeUp = (popup, сompleteHandler) => {
 				gsap.fromTo(
 					popup,
 					{ autoAlpha: 0, y: 50, scale: 0.98, display: 'block' },
@@ -32,18 +32,24 @@ class ProjectApp {
 						autoAlpha: 1,
 						y: 0,
 						scale: 1,
-						duration: immediate ? 0 : 0.35,
+						duration: 0.35,
+						onComplete: () => {
+							сompleteHandler();
+						},
 					}
 				);
 			};
 
-			this.modules.Popups.animations.fadeDown = (popup, immediate) => {
+			this.modules.Popups.animations.fadeDown = (popup, immediate, сompleteHandler) => {
 				gsap.to(popup, {
 					autoAlpha: 0,
 					y: 50,
 					scale: 0.98,
 					display: 'none',
 					duration: immediate ? 0 : 0.35,
+					onComplete: () => {
+						сompleteHandler();
+					},
 				});
 			};
 		});

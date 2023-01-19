@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import Popups from 'sp.popups';
 
 // import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js';
 // gsap.registerPlugin(ScrollToPlugin);
@@ -18,11 +19,10 @@ class ProjectApp {
 		};
 		this.components = {};
 		this.helpers = {};
-		this.modules = {
-			Popups: require('./modules/Popups'),
-		};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
+
+			new Popups();
 		});
 	}
 }

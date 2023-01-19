@@ -1,6 +1,6 @@
 .pay-now {
 	max-width: rem(640);
-	max-height: 340px;
+	max-height: 360px;
 	padding: rem(16);
 	overflow: auto;
 	&__title {
@@ -23,6 +23,16 @@
 		column-gap: rem(16);
 		row-gap: rem(16);
 		justify-content: center;
+	}
+	&__tab {
+		flex-shrink: 0;
+	}
+	&__tabs {
+		display: flex;
+		column-gap: 16px;
+		margin-bottom: 39px;
+		padding: 10px 0;
+		overflow: auto;
 	}
 	&__info {
 		margin-top: 39px;

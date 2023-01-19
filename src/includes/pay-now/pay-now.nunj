@@ -1,4 +1,15 @@
 <div class="pay-now">
+	<div class="pay-now__tabs">
+		<button class="pay-now__tab button" type="button">Tab 1</button>
+		<button class="pay-now__tab button" type="button">Tab 2</button>
+		<button class="pay-now__tab button" type="button">Tab 3</button>
+		<button class="pay-now__tab button" type="button">Tab 4</button>
+		<button class="pay-now__tab button" type="button">Tab 5</button>
+		<button class="pay-now__tab button" type="button">Tab 6</button>
+		<button class="pay-now__tab button" type="button">Tab 7</button>
+		<button class="pay-now__tab button" type="button">Tab 8</button>
+		<button class="pay-now__tab button" type="button">Tab 9</button>
+	</div>
 	<h2 class="pay-now__title big-title medium">Would you like to&nbsp;pay right now?</h2>
 	<p class="pay-now__text">To&nbsp;activate bundle, you need pay for Invoce #001</p>
 	<div class="pay-now__buttons">

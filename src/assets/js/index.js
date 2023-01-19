@@ -1,13 +1,13 @@
-// import { gsap } from 'gsap';
+import { gsap } from 'gsap';
 
 // import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js';
 // gsap.registerPlugin(ScrollToPlugin);
 
-// global.gsap = gsap;
+global.gsap = gsap;
 
-// gsap.defaults({
-// 	overwrite: 'auto',
-// });
+gsap.defaults({
+	overwrite: 'auto',
+});
 
 class ProjectApp {
 	constructor() {

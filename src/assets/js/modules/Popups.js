@@ -1,4 +1,3 @@
-import { gsap } from 'gsap';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import Signal from '../classes/Signal';
 

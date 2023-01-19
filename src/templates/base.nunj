@@ -21,8 +21,8 @@
 			{% block content %}
 			{% endblock content %}
 
-			{{ popups(popupsList) }}
 		</div>
+		{{ popups(popupsList) }}
 
 		{% block scripts %}
 			<script src="assets/js/bundle.js?hash"></script>

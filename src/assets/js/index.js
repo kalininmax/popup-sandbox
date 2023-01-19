@@ -1,5 +1,4 @@
 import { gsap } from 'gsap';
-import Popups from 'sp.popups';
 
 // import { ScrollToPlugin } from 'gsap/ScrollToPlugin.js';
 // gsap.registerPlugin(ScrollToPlugin);
@@ -15,14 +14,38 @@ class ProjectApp {
 		this.env = require('./utils/env').default;
 		this.utils = require('./utils/utils').default;
 		this.classes = {
-			// Signal: require('./classes/Signal').default,
+			Signal: require('./classes/Signal').default,
 		};
 		this.components = {};
 		this.helpers = {};
+		this.modules = {
+			Popups: require('sp.popups').default,
+		};
 		document.addEventListener('DOMContentLoaded', () => {
 			document.documentElement.classList.remove('_loading');
 
-			new Popups();
+			this.modules.Popups.animations.fadeUp = (popup, immediate) => {
+				gsap.fromTo(
+					popup,
+					{ autoAlpha: 0, y: 50, scale: 0.98, display: 'block' },
+					{
+						autoAlpha: 1,
+						y: 0,
+						scale: 1,
+						duration: immediate ? 0 : 0.35,
+					}
+				);
+			};
+
+			this.modules.Popups.animations.fadeDown = (popup, immediate) => {
+				gsap.to(popup, {
+					autoAlpha: 0,
+					y: 50,
+					scale: 0.98,
+					display: 'none',
+					duration: immediate ? 0 : 0.35,
+				});
+			};
 		});
 	}
 }

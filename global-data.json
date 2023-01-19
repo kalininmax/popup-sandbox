@@ -25,7 +25,9 @@
 	],
 	"popupsList": [
 		{
-			"name": "pay-now"
+			"name": "pay-now",
+			"openAnimation": "fadeUp",
+			"closeAnimation": "fadeDown"
 		}
 	]
 }

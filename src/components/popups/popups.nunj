@@ -3,7 +3,7 @@
 {% macro popups(names) %}
 	<div class="popups" data-popups>
 			{% for i in names %}
-				<div class="popups__popup" data-popup="{{ i.name }}">
+				<div class="popups__popup" data-popup="{{ i.name }}"{% if i.openAnimation %} data-popup-open-animation="{{ i.openAnimation }}"{% endif %}{% if i.openAnimation %} data-popup-close-animation="{{ i.closeAnimation }}"{% endif %}>
 					{% include './popups-' + i.name + '.nunj' %}
 					<button class="popups__close-button close-button" type="button" data-popup-closer>
 						{{ icon({
